@@ -1,0 +1,44 @@
+# v0 sandbox internal files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
+.vercel/
+
+# Environment variables
+.env*.local
+
+# Common ignores
+node_modules
+.next/
+.DS_Store
+
+# ASP.NET config (contains connection strings/credentials) - keep out of GitHub.
+# Copy Web.config.example to Web.config and fill in the credentials.
+Web.config
+Web.Debug.config
+Web.Release.config
+
+# Visual Studio / MSBuild build output & IDE state
+.vs/
+obj/
+*.user
+*.suo
+*.cache
+TestResults/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# bin/ is build output, EXCEPT the third-party DLLs this Web Site project
+# references directly (not restored by NuGet).
+bin/*
+!bin/SCWebsiteContent2012.dll
+!bin/Microsoft.Practices.EnterpriseLibrary.Common.dll
+!bin/Microsoft.Practices.EnterpriseLibrary.Data.dll
+!bin/Microsoft.Practices.ServiceLocation.dll
+!bin/Microsoft.Practices.Unity.dll
+!bin/Microsoft.Practices.Unity.Interception.dll
+
+# NuGet packages folder (restored from packages.config)
+packages/

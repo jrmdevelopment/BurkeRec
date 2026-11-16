@@ -1,0 +1,131 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.Master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#232c39" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server">Burke County Recreation Department</asp:ContentPlaceHolder></title>
+    <asp:ContentPlaceHolder ID="MetaContent" runat="server">
+        <meta name="description" content="The Burke County Recreation Department organizes and maintains the highest quality recreation programs, sports, classes and facilities for all citizens of Burke County, Georgia." />
+    </asp:ContentPlaceHolder>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/site.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Top utility bar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-info">
+                    <span><span class="dot"></span> Mon&ndash;Thurs 9:00am &ndash; 5:30pm</span>
+                    <span>Office: <a href="tel:7065545210">706-554-5210</a></span>
+                </div>
+                <div class="topbar-info">
+                    <span><a href="mailto:burkerec@burkecounty-ga.gov">burkerec@burkecounty-ga.gov</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header + primary navigation -->
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="Default.aspx">
+                    <img src="Images/logo.png" alt="Burke County Recreation Department" />
+                </a>
+
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="mainNav" aria-expanded="false">
+                    <span></span>
+                </button>
+
+                <nav id="mainNav" class="main-nav" aria-label="Primary">
+                    <a href="Default.aspx" runat="server" id="navHome">Home</a>
+                    <div class="nav-item has-dropdown">
+                        <button type="button" runat="server" id="navSports" class="nav-trigger submenu-toggle" aria-controls="sportsMenu" aria-expanded="false">Sports <span class="caret" aria-hidden="true"></span></button>
+                        <div id="sportsMenu" class="dropdown">
+                            <div class="dropdown-group">
+                                <span class="dropdown-heading">Youth</span>
+                                <ul>
+                                    <li><a href="YouthBaseball.aspx">Baseball</a></li>
+                                    <li><a href="YouthSoftball.aspx">Softball</a></li>
+                                    <li><a href="YouthTBall.aspx">TBall/BATS</a></li>
+                                    <li><a href="YouthSoccer.aspx">Soccer</a></li>
+                                    <li><a href="YouthFootball.aspx">Tackle Football</a></li>
+                                    <li><a href="YouthFlagFootball.aspx">Flag Football</a></li>
+                                    <li><a href="YouthCheerleading.aspx">Cheerleading</a></li>
+                                    <li><a href="YouthBasketball.aspx">Basketball</a></li>
+                                    <li><a href="YouthVolleyball.aspx">Volleyball</a></li>
+                                    <li><a href="YouthTrack.aspx">Track</a></li>
+                                    <li><a href="YouthWrestling.aspx">Wrestling</a></li>
+                                    <li><a href="YouthSS.aspx">Schedules &amp; Standings</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-group">
+                                <span class="dropdown-heading">Adult</span>
+                                <ul>
+                                    <li><a href="AdultBasketball.aspx">Basketball</a></li>
+                                    <li><a href="AdultSoftball.aspx">Softball</a></li>
+                                    <li><a href="AdultSS.aspx">Schedules &amp; Standings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Programs.aspx" runat="server" id="navPrograms">Programs</a>
+                    <a href="MasterCalendar.aspx" runat="server" id="navCalendar">Calendar</a>
+                    <a href="About.aspx" runat="server" id="navAbout">About</a>
+                    <a href="Facilities.aspx" runat="server" id="navFacilities">Facilities</a>
+                    <a href="Contact.aspx" runat="server" id="navContact">Contact</a>
+                    <a class="btn btn-primary" href="Registration.aspx">Register</a>
+                </nav>
+            </div>
+        </header>
+        <div class="brand-ribbon" aria-hidden="true"></div>
+
+        <main id="mainContent">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <img class="footer-logo" src="Images/burke%20parks%20and%20rec%20logo%20WHITE%20TEXT.png" alt="Burke County Recreation Department" />
+                        <p>Organizing, conducting and maintaining the highest quality recreation services for all citizens of Burke County, Georgia.</p>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul class="footer-links">
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="Programs.aspx">Programs &amp; Classes</a></li>
+                            <li><a href="MasterCalendar.aspx">Calendar</a></li>
+                            <li><a href="About.aspx">About Us</a></li>
+                            <li><a href="Facilities.aspx">Facilities</a></li>
+                            <li><a href="Contact.aspx">Contact</a></li>
+                            <li><a href="Registration.aspx">Registration</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="tel:7065545210">706-554-5210</a></li>
+                            <li><a href="mailto:burkerec@burkecounty-ga.gov">burkerec@burkecounty-ga.gov</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>&copy; <%= DateTime.Now.Year %> Burke County Recreation Department. All rights reserved.</span>
+                    <span>Recreation Management Software by <a href="https://www.jarvisrec.com" target="_blank" rel="noopener">Jarvis</a></span>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="Scripts/site.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    </form>
+</body>
+</html>

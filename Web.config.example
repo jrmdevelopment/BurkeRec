@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Burke County Recreation Department
+  ASP.NET Web Forms (Web Site model) configuration.
+-->
+<configuration>
+	<connectionStrings>
+		<add name="JarvisDB" connectionString="server=YOUR_SERVER;database=Jarvis;uid=YOUR_USER;pwd=YOUR_PASSWORD" providerName="System.Data.SqlClient"/>
+		<add name="SCReporting2012.My.MySettings.Sportsconductor2012" connectionString="Data Source=YOUR_SERVER;Initial Catalog=Jarvis;User ID=YOUR_USER;Password=YOUR_PASSWORD" providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+
+	<appSettings>
+		<!-- Validators use classic client script so no jQuery ScriptResourceMapping is required. -->
+		<add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+		<add key="Organization" value="173" />
+		<!-- Jarvis activity category for special events (Programs page cards and SpecialEvent.aspx). -->
+		<add key="SpecialEventsCategoryKey" value="1666" />
+		<!-- Jarvis activity category for camps (Programs page cards and Camp.aspx). -->
+		<add key="CampsCategoryKey" value="1635" />
+		<!-- Jarvis activity category for ceramics classes (listed on Ceramics.aspx). -->
+		<add key="CeramicsCategoryKey" value="1671" />
+		<!-- Jarvis activity category for karate classes (listed on Karate.aspx). -->
+		<add key="KarateCategoryKey" value="1638" />
+		<!-- Jarvis activity category for tennis classes (listed on Tennis.aspx). -->
+		<add key="TennisCategoryKey" value="1684" />
+		<!-- Jarvis activity category for pickleball classes (listed on Pickleball.aspx). -->
+		<add key="PickleballCategoryKey" value="1685" />
+		<!-- Jarvis activity category for ESports classes (listed on ESports.aspx). -->
+		<add key="ESportsCategoryKey" value="1683" />
+		<!-- Jarvis activity category for homeschool outings (listed on HomeschoolOuting.aspx). -->
+		<add key="HomeschoolOutingCategoryKey" value="1637" />
+		<!-- Jarvis activity categories for sports; the Register button on each sport page is disabled when nothing is registering. -->
+		<add key="YouthBaseballCategoryKey" value="1632" />
+		<add key="YouthSoftballCategoryKey" value="1648" />
+		<add key="YouthFootballCategoryKey" value="1650" />
+		<add key="YouthSoccerCategoryKey" value="1653" />
+		<add key="YouthVolleyballCategoryKey" value="1654" />
+		<add key="YouthBasketballCategoryKey" value="1655" />
+		<add key="YouthTrackCategoryKey" value="1662" />
+		<add key="AdultBasketballCategoryKey" value="1633" />
+		<add key="AdultSoftballCategoryKey" value="1657" />
+		<add key="CheerleadingCategoryKey" value="1649" />
+		<add key="YouthFlagFootballGirlsCategoryKey" value="1651" />
+		<add key="YouthFlagFootballCoedCategoryKey" value="1652" />
+		<add key="YouthWrestlingCategoryKey" value="1656" />
+		<add key="YouthTBallCategoryKey" value="1681" />
+	</appSettings>
+
+	<system.web>
+		<compilation debug="true" targetFramework="4.8" />
+		<httpRuntime targetFramework="4.8" enableVersionHeader="false" />
+		<pages controlRenderingCompatibilityVersion="4.0" />
+		<customErrors mode="Off" />
+	</system.web>
+
+	<system.webServer>
+		<defaultDocument>
+			<files>
+				<clear />
+				<add value="Default.aspx" />
+			</files>
+		</defaultDocument>
+		<httpProtocol>
+			<customHeaders>
+				<add name="X-Content-Type-Options" value="nosniff" />
+				<add name="Referrer-Policy" value="strict-origin-when-cross-origin" />
+				<add name="X-Frame-Options" value="SAMEORIGIN" />
+				<add name="Permissions-Policy" value="camera=(), microphone=(), geolocation=()" />
+			</customHeaders>
+		</httpProtocol>
+	</system.webServer>
+</configuration>
