@@ -10,6 +10,9 @@
         <div class="container reveal">
             <h1>Our Facilities</h1>
             <p>Find addresses, phone numbers and hours for every Burke County Recreation Department location.</p>
+            <div class="hero-actions" style="margin-top:20px;">
+                <a class="btn btn-primary btn-lg" href="documents/Burke_Co_Rental_Fees.pdf" target="_blank" rel="noopener">Rental Fees</a>
+            </div>
         </div>
     </section>
 
